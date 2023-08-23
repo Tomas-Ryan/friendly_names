@@ -12,7 +12,7 @@ view: social_friendly_names {
     sql: ${TABLE}.CampaignName ;;
     action: {
       label: "Add friendly name"
-      url: "https://us-central1-mightyhive-data-science-poc.cloudfunctions.net/friendly_names_auth"
+      url: "https://us-central1-mightyhive-data-science-poc.cloudfunctions.net/friendly_names"
       param: {
         name:"campaign_name"
         value: "{{ value }}"
@@ -26,7 +26,7 @@ view: social_friendly_names {
       form_param: {
         name: "contains"
         type: select
-        label: "Contains?"
+        label: "Do you want to impute the friendly name to all campaigns that contain some string in common?"
         required: yes
         option: {
           name: "No"
@@ -40,7 +40,7 @@ view: social_friendly_names {
       form_param: {
         name: "contains_string"
         type: textarea
-        label: "Enter the string"
+        label: "Enter the string in common"
         required: no
       }
     }

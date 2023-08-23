@@ -11,7 +11,7 @@ view: datamart_social_friendly_names {
     LEFT JOIN ${social_friendly_names.SQL_TABLE_NAME}  b
     ON
       campaign=b.CampaignName AND a.brand=b.Brand
-     # WHERE a.date >= DATE('2023-04-01')
+    #WHERE a.date >= DATE('2023-04-01')
     ;;
   }
 
